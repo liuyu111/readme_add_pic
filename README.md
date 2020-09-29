@@ -9,4 +9,4 @@
 * 图像分析（computer vision, image segmentation and deep learning）
 
 如果将图像转为坐标中的坐标
-！[Alt text]（https://github.com/liuyu111/readme_add_pic/blob/master/directory/W1(1).PNG）
+![image](https://github.com/liuyu111/readme_add_pic/blob/master/directory/W1(1).PNG)
