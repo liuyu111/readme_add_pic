@@ -66,7 +66,9 @@ Laplacian pyramids(带通)：可以认为是残差金字塔，用来存储下采
 腐蚀与膨胀；开运算与闭运算
 
 ## 4.Greyscale Morphology, Energy Minimization, 3D Reconstruction(灰度形态学，能量最小，3D重构)
-### Greyscale morphology
-
+分水岭算法
+* 四叉树平滑（Pyramids）
+* 对底层分类的水浸
+* 重新边界预测
 
 
