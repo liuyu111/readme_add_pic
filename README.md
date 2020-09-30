@@ -69,6 +69,6 @@ Laplacian pyramids(带通)：可以认为是残差金字塔，用来存储下采
 分水岭算法
 * 四叉树平滑（Pyramids）
 * 对底层分类的水浸
-* 重新边界预测
+* 重新边界预测（reflooded as before at the next resolution, repeated until the original image resolution is reached.）
 
 
