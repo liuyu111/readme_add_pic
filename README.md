@@ -35,9 +35,20 @@ DCT-based decoder processing step(compressed image data->DCT-based decoder->Sour
 * Sobel(5*5)
 从最上面的算子Good localization, noise sensitive and poor detection --> poor localization, less noise sensitive and good detection. 
 
-### 图像金字塔
-Gaussian pyramid(低通)：1）使用filter对图像进行平滑处理 2）下采样 3）循环1&2操作得到更小，平滑度更高，分辨率更低的图像。
-Laplacian pyramids(带通)：可以认为是残差金字塔，用来存储下采样后图片与原始图片的差异。因此拉普拉斯金字塔需要结合高斯金字塔使用。L_i = G_i - expand(G_(i+1))
-应用：cv2.pyrDown;cv2.pyrUp
+### pyramids(图像金字塔)
+Gaussian pyramid(低通)：1）使用filter对图像进行平滑处理 2）下采样 3）循环1&2操作得到更小，平滑度更高，分辨率更低的图像。  
+Laplacian pyramids(带通)：可以认为是残差金字塔，用来存储下采样后图片与原始图片的差异。因此拉普拉斯金字塔需要结合高斯金字塔使用。L_i = G_i - expand(G_(i+1))  
+应用：cv2.pyrDown;cv2.pyrUp  
 
+### Hough transform(霍夫变换)
+通过将直线或圆的表达式转化到Hesse仿射坐标系（roi,theta），直线或圆交于仿射坐标系上的每一点为直线或圆的特征
 
+## 3.Image Representations and Morphology（图像表示和形态学）
+### Image representation(图像表示)
+数字图像DFT
+空间域和频域
+* 空间域：在图像处理中，时域可以理解为空间域或者图像空间，处理对象为图像像元。
+* 频域：以空间频域为自变量描述图像的特性。
+空间域与频域可互相转换，对图像施行 二维离散傅立叶变换或小波变换，可以将图像由空间域转换到频域；通过对应的反变换又可转换回空间域图像，即人可以直接识别的图像。 
+
+### Morphology(形态学)
