@@ -1,7 +1,7 @@
 # Image-processing and Computer version
 	Review of what I learnt on image prcessing course.
 	记录我对于ELEC4630 image processing 知识的掌握
-## Fundamentals
+## 1.Fundamentals
 在图像分析中主要从4个方面分析
 * 图像表示、编码及传输
 * 图像增强
@@ -26,4 +26,18 @@ JPEG图像的加解码使用Discrete Cosine Transform(DCT)
 DCT-based encoder processing step(Source image data->DCT-based encoder->compressed image data)  
 DCT-based decoder processing step(compressed image data->DCT-based decoder->Source image data)
 
-## 
+## 2.Pyramids and Hough Transform（金字塔和霍夫变换）
+### 边缘算子
+对于图像分析，第一步应该就是图像分割，而图像分割与图像的边界相关，一下是几种边缘算子  
+* Gradient: <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;f&space;=&space;\left&space;\lfloor&space;\frac{delta_f}{delta_x},\frac{delta_f}{delta_y}&space;\right&space;\rfloor" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;f&space;=&space;\left&space;\lfloor&space;\frac{delta_f}{delta_x},\frac{delta_f}{delta_y}&space;\right&space;\rfloor" title="\Delta f = \left \lfloor \frac{delta_f}{delta_x},\frac{delta_f}{delta_y} \right \rfloor" /></a>
+* Robert(2*2)
+* Sobel(3*3)
+* Sobel(5*5)
+从最上面的算子Good localization, noise sensitive and poor detection --> poor localization, less noise sensitive and good detection. 
+
+### 图像金字塔
+Gaussian pyramid(低通)：1）使用filter对图像进行平滑处理 2）下采样 3）循环1&2操作得到更小，平滑度更高，分辨率更低的图像。
+Laplacian pyramids(带通)：可以认为是残差金字塔，用来存储下采样后图片与原始图片的差异。因此拉普拉斯金字塔需要结合高斯金字塔使用。L_i = G_i - expand(G_(i+1))
+应用：cv2.pyrDown;cv2.pyrUp
+
+
