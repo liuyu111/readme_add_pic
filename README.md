@@ -70,5 +70,10 @@ Laplacian pyramids(带通)：可以认为是残差金字塔，用来存储下采
 * 四叉树平滑（Pyramids）
 * 对底层分类的水浸
 * 重新边界预测（reflooded as before at the next resolution, repeated until the original image resolution is reached.）
+### 3D Reconstruction
+3D重建分为稀疏重构或者稠密重构
+shape from silhouette
+
+## 5.Projective Geometry (and Energy Minimization continued)
 
 
