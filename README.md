@@ -49,6 +49,24 @@ Laplacian pyramids(带通)：可以认为是残差金字塔，用来存储下采
 空间域和频域
 * 空间域：在图像处理中，时域可以理解为空间域或者图像空间，处理对象为图像像元。
 * 频域：以空间频域为自变量描述图像的特性。
-空间域与频域可互相转换，对图像施行 二维离散傅立叶变换或小波变换，可以将图像由空间域转换到频域；通过对应的反变换又可转换回空间域图像，即人可以直接识别的图像。 
-
+空间域与频域可互相转换，对图像施行 **二维离散傅立叶变换**或**小波变换**，可以将图像由空间域转换到频域；通过对应的反变换又可转换回空间域图像，即人可以直接识别的图像。 
+二维傅里叶变换采取换位方法使直流成分出现在中央（中心化），变换后中心为低频，外面为高频。
+图像的锐化和模糊
+* 截取频率的低频分量，对其作傅里叶变换，得到的就是模糊后的图像，即**低通滤波**  
+* 截取频率的高频分量，对其作傅里叶变换，得到的就是锐化后的图像，即**高通滤波**  
+傅里叶变化中的Magnitude在自然的图像中基本相同。
+图像表示的几种方法  
+* Chain codes: 基于4联通或8联通
+* Signatures: 用1维数组来表示边界
+### Thresholding(阈值)
+* Automatic thresholding --Otsu's method MATAB中的grayscale
+* Adaptive thresholding --1) adaptive mean threshold 2)adaptive gaussian threshold
 ### Morphology(形态学)
+形态学技术被用来找边界，skeletons，convex hulls
+腐蚀与膨胀；开运算与闭运算
+
+## 4.Greyscale Morphology, Energy Minimization, 3D Reconstruction(灰度形态学，能量最小，3D重构)
+### Greyscale morphology
+
+
+
