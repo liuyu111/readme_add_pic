@@ -135,3 +135,5 @@ DNN 框架
 * facebook: torch,pytorch,caffe2
 * caffe,caffe2,keras,mxnet,darnet,matconvnet,matlab2017,etc
 
+## 10.getting in deep(更深度学习)
+安装 AI/DL 在conda环境中
