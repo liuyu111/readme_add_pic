@@ -103,6 +103,35 @@ P_i = A*P_i*V*v_m
 **[X_w,Y_w,Z_w,W_w]**
 
 ## 5.Projective Geometry （投影结构）
-## 6.Biometrixs and Face detection (生物识别和人脸识别)
+## 6.Biometrics and Face detection (生物识别和人脸识别)
+* 指纹识别
+* 人脸识别（最常见）
+* 虹膜识别（精度最高）
+* 声音识别（精度最低）
+Receiver Operating Characteristic Curve(ROC)
 
+## 8.Face recogntion and srveillance
+## 9.Deep learning for computer vision
+### CNN for image analysis
+three main layer types
+* input layer(输入层)-图像
+* convolutional layer(卷积层)-可调滤波器
+* pooling layer(池化层)-减少图像尺寸
+* fully-connected layer(全连接层)-分类和做决策
+图像分析的框架[input-connv-relu-connv-relu-pool-fc]
+* input 原始图片的尺寸包含R,G,B三通道
+* conv 根据神经元的输出确定连接Input的尺寸
+* relu 将应用逐元素激活（高斯滤波）
+* pool 下采样，减小图片尺寸
+* FC 计算每个归类的分数然后进行分类
+
+### object detection
+对象检测是对图像的分类
+* backbone detector
+* Post CNN
+* generative adversarial networks(gan)
+DNN 框架
+* google:tensorflow
+* facebook: torch,pytorch,caffe2
+* caffe,caffe2,keras,mxnet,darnet,matconvnet,matlab2017,etc
 
