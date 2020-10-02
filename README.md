@@ -64,16 +64,45 @@ Laplacian pyramids(带通)：可以认为是残差金字塔，用来存储下采
 ### Morphology(形态学)
 形态学技术被用来找边界，skeletons，convex hulls
 腐蚀与膨胀；开运算与闭运算
+结合图像的开闭运算，形态学又有thinning,thickening,skeletonization and pruning
 
 ## 4.Greyscale Morphology, Energy Minimization, 3D Reconstruction(灰度形态学，能量最小，3D重构)
+### 灰度形态学运算
+许多二进制形态学运算简单的扩展到灰度图像
+因此就有了灰度图膨胀、腐蚀、开运算与闭运算  
 分水岭算法
-* 四叉树平滑（Pyramids）
-* 对底层分类的水浸
-* 重新边界预测（reflooded as before at the next resolution, repeated until the original image resolution is reached.）
+* 四叉树平滑（多分辨率操作，Pyramids）
+* 对底层分类的水浸（将图片按照灰度向上延伸，水浸底层低灰度light pixels become flooded first）
+* 重新边界预测（在新的分辨率下重复水浸，产生新的边界，直到图片达到原分辨率）
+
+### Discrete energy minimisation
+* Dynamic progamming/Viterbi
+example: string matching,stero matching
+* Dijkstra's Algorithm and fast marching
+example: path planning
+active contours(snake)
+* 最初的snake模型基于能量最小化框架，但是不能处理变形过程中的**拓扑变化**，从而不能用于检测多目标的情况。
+* 后来将曲线量化为level set函数（等势线），但是曲线容易越过边界运动到物体内部
+* Geodesic active contours 使得曲线可以停在目标物体的边缘
+
 ### 3D Reconstruction
 3D重建分为稀疏重构或者稠密重构
 shape from silhouette
+相机有两个最主要参数
+* intrinsic calibration内在校准（内参）
+* extrinsic callibration外在校准（外参）[X_w,Y_w,Z_w,W_w]
+标定获得3维和2维关系
+* step1: 计算外参转换
+extrinsic matrix -> projective matirx  
+**[X,Y,Z,W]**
+* step2: 计算投影矩阵
+3D projective matrix -> 2D projective matrix  
+**[X_i,Y_i,W_i]**
+* step3: 添加内参获得图像
+P_i = A*P_i*V*v_m  
+**[X_w,Y_w,Z_w,W_w]**
 
-## 5.Projective Geometry (and Energy Minimization continued)
+## 5.Projective Geometry （投影结构）
+## 6.Biometrixs and Face detection (生物识别和人脸识别)
 
 
